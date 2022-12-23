@@ -1,0 +1,43 @@
+.st-container{
+  background-color: #eee;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  table {
+    width: 30%;
+    padding: 20px;
+    border-radius: 10px;
+    th {
+      background-color: black;
+      color: #fff;
+      font-size: 16px;
+    }
+    th:hover {
+      background-color: blue;
+        color: red;
+    }
+  }
+  .form-container {
+    width: 30%;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 1px 1px #ccc;
+    border-radius: 10px;
+    h1 {
+      text-align: center;
+    }
+    mat-form-field {
+      width: 100%;
+    }
+
+    .btns {
+      text-align: right;
+      margin-bottom: 50px;
+      button {
+        margin-left: 20px;
+      }
+    }
+  }
+}

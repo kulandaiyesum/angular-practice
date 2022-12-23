@@ -1,0 +1,17 @@
+.table-container{
+  width: 100%;
+  background-color: aqua;
+  padding: 20px 0;
+  table {
+    width: 80%;
+    margin: 0 auto;
+    background-color: white;
+    th {
+      background-color: antiquewhite;
+    }
+  }
+}
+table {
+  width: 80%;
+  margin: 20px auto;
+}

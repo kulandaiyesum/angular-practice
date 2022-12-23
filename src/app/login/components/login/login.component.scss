@@ -1,0 +1,119 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.login-container {
+  // background-color: aliceblue;
+  height: 100vh;
+  // .section-one {
+  //   width: 100%;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   padding: 20px 0;
+  //   form {
+  //     width: 40%;
+  //     background-color: white;
+  //     border-radius: 4px;
+  //     box-shadow: 0 0 1px 1px #ccc;
+  //     padding: 10px;
+  //     h2 {
+  //       text-align: center;
+  //     }
+  //     fieldset {
+  //       width: 100%;
+  //       border: none;
+  
+  //       .row {
+  //         display: flex;
+  //         width: 100%;
+  //         justify-content: space-between;
+          
+  //         .col {
+  //           width: 48%;
+  //           margin: 10px 0;
+  //           input {
+  //             width: 100%;
+  //             border: none;
+  //             border-bottom: 1px solid #ccc;
+  //             text-align: center;
+  //             outline: none;
+  //           }
+  //           select {
+  //             width: 100%;
+  //             padding: 10px;
+  //             color: #777;
+  //             text-align: center;
+  //             border: none;
+  //             border-bottom: 1px solid #ccc;
+  //             outline: none;
+  //           }
+  
+  //         }
+  //       }
+  //       .btn-section {
+  //         display: flex;
+  //         justify-content: flex-end;
+  //         button {
+  //           padding: 10px;
+  //           margin-right: 20px;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+  // .second {
+  //   width: 100%;
+  //   background-color: white;
+  //   table {
+  //     width: 80%;
+  //     margin: 20px auto;
+  //     background-color: white;
+  //     box-shadow: 0 0 1px 1px #ccc;
+  //     th {
+  //       background-color: white;
+  //     }
+  //     td {
+  //       background-color: aqua;
+  //     }
+  //   }
+
+  // }
+  .section-two {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 50px;
+    .table-container {
+      width: 60%;
+      table {
+        width: 100%;
+        th {
+          background-color: black;
+          color: white;
+          text-align: center;
+          font-size: 16px;
+        }
+        th:hover {
+          cursor: pointer;
+          background-color: aqua;
+          color: black;
+        }
+      }
+    }
+    form {
+      width: 30%;
+      .row {
+        display: flex;
+        justify-content: space-around !important;
+      }
+      .button-row {
+        text-align: end;
+        button {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+}

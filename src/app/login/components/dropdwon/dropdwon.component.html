@@ -1,0 +1,117 @@
+<main>
+
+  <div class="drop-container">
+    <div class="c">
+      <div class="section-1">
+        <mat-form-field>
+          <mat-label>Name</mat-label>
+          <input matInput name="userName" [(ngModel)]="dropdwon.userName">
+        </mat-form-field>
+      
+        <mat-form-field>
+          <mat-label>Email</mat-label>
+          <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com" name="email" [(ngModel)]="dropdwon.email">
+          <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+            Please enter a valid email address
+          </mat-error>
+          <mat-error *ngIf="emailFormControl.hasError('required')">
+            Email is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Phone Number</mat-label>
+          <input matInput type="tel" name="phoneNo" [(ngModel)]="dropdwon.phoneNo">
+        </mat-form-field>
+      
+        <mat-form-field appearance="fill">
+          <mat-label>pump type</mat-label>
+          <mat-select [(ngModel)]="ptype" name="pumpTypes" [(ngModel)]="dropdwon.pumpTypes">
+            <mat-option value='single phase'>single phase</mat-option>
+            <mat-option value='3 phase'>3 phase</mat-option>
+          </mat-select>
+        </mat-form-field>
+      
+        <mat-form-field appearance="fill" color="accent" *ngIf="ptype == 'single phase'">
+          <mat-label> single phase</mat-label>
+          <mat-select multiple name="singlePhase" [(ngModel)]="dropdwon.singlePhase">
+            <mat-option value='1/2 hp'>1/2 hp</mat-option>
+            <mat-option value='1 hp'>1 hp</mat-option>
+            <mat-option value='2 hp'>2 hp</mat-option>
+            <mat-option value='3 hp'>3 hp</mat-option>
+            <mat-option value='4 hp'>4 hp</mat-option>
+            <mat-option value='5 hp'>5 hp</mat-option>
+          </mat-select>
+        </mat-form-field>
+      
+        <mat-form-field appearance="fill" color="accent" *ngIf="ptype == '3 phase'">
+          <mat-label>3 phase</mat-label>
+          <mat-select multiple name="threePhase" [(ngModel)]="dropdwon.threePhase">
+            <mat-option value='1 hp'>1 hp</mat-option>
+            <mat-option value='3 hp'>3 hp</mat-option>
+            <mat-option value='5 hp'>5 hp</mat-option>
+            <mat-option value='7 hp'>7 hp</mat-option>
+            <mat-option value='10 hp'>10 hp</mat-option>
+            <mat-option value='15 hp'>15 hp</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="btn-s">
+        <button mat-raised-button color="accent" (click)="dppostFn()">submit</button>
+        <button mat-raised-button color="warn">reset</button>
+      </div>
+
+    </div>
+
+    <!-- <div class="imgclass">
+       <img src="../../../../assets/valves.jpg" alt="valves">
+    </div> -->
+      <table mat-table [dataSource]="dataS" class="mat-elevation-z8">
+      
+       
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef> No. </th>
+          <td mat-cell *matCellDef="let elem"> {{elem.id}} </td>
+        </ng-container>
+      
+        
+        <ng-container matColumnDef="userName">
+          <th mat-header-cell *matHeaderCellDef> Name </th>
+          <td mat-cell *matCellDef="let elem"> {{elem.userName}} </td>
+        </ng-container>
+      
+       
+        <ng-container matColumnDef="email">
+          <th mat-header-cell *matHeaderCellDef> email </th>
+          <td mat-cell *matCellDef="let elem"> {{elem.email}} </td>
+        </ng-container>
+      
+       
+        <ng-container matColumnDef="phoneNo">
+          <th mat-header-cell *matHeaderCellDef> Phone number </th>
+          <td mat-cell *matCellDef="let elem"> {{elem.phoneNo}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="pumpTypes">
+          <th mat-header-cell *matHeaderCellDef> pump type </th>
+          <td mat-cell *matCellDef="let elem"> {{elem.pumpTypes}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="singlePhase">
+          <th mat-header-cell *matHeaderCellDef> 1phase </th>
+          <td mat-cell *matCellDef="let elem"> {{elem.singlePhase}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="threePhase">
+          <th mat-header-cell *matHeaderCellDef> 3phase </th>
+          <td mat-cell *matCellDef="let elem"> {{elem.threePhase}} </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    
+  </div>
+</main>
+
